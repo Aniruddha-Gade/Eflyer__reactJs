@@ -47,9 +47,7 @@ const Navbar = () => {
                 className="flex items-center gap-2"
             >
                 <img
-                    src="../../../public/eflyer-icon.png"
-                    // width={40}
-                    // height={40}
+                    src="/eflyer-icon.png"
                     alt="Eflyer Logo"
                     className="w-8 h-8 md:w-10 md:h-10"
                 />
