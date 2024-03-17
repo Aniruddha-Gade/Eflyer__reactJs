@@ -9,7 +9,7 @@
 
 
 
-<img width='100%' src='https://github.com/Aniruddha-Gade/Eflyer__reactJs/blob/main/screenshots/img4.png' />
+<img width='100%' src='https://github.com/Aniruddha-Gade/Eflyer__reactJs/blob/main/screenshots/img5.png' />
 
 ## Description 📝
 This project is an interactive e-commerce platform built using ReactJS, Tailwind CSS, and Redux Toolkit.   <br/>
