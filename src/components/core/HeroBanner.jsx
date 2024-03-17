@@ -17,7 +17,7 @@ const HeroBanner = () => {
 
 
     return (
-        <div className="w-full h-[450px] md:h-[500px] flex justify-center items-center relative text-white">
+        <div className="w-full h-[650px] md:h-[550px] flex justify-center items-center relative text-white">
 
             {/* background image */}
             <div className='w-screen h-screen absolute top-0 left-0 bottom-0 opacity-[0.5 overflow-y-hidden object-cover'>
@@ -32,50 +32,54 @@ const HeroBanner = () => {
             {/* background layer */}
             <div className='absolute left-0 bottom-0 w-full h-[100px] opacity_layer_bg '></div>
 
-            <div className='w-full px-24 flex flex-col justify-center items-center gap-11 relative'>
+            <div className='w-full px-24 py-10 flex flex-col justify-around md:justify-center h-full items-center gap-5 md:gap-11 relative '>
                 <h2 className='text-[30px] md:text-[40px] font-bold font-rubik '>
                     Eflyer
                 </h2>
 
-                <div className='w-full flex justify-between items-center h-12 gap-7  '>
+                <div className='w-full flex flex-col lg:flex-row justify-between items-center h-12 gap-7  '>
                     {/* menu button */}
-                    <div className="">
-                        <GiHamburgerMenu size={50} />
-                    </div>
+                    <div className='flex gap-5 items-center'>
+                        <div className="cursor-pointer">
+                            <GiHamburgerMenu size={50} />
+                        </div>
 
-                    {/* category list */}
-                    <CategoryList />
+                        {/* category list */}
+                        <CategoryList />
+                    </div>
 
 
                     {/* searh input */}
                     <SearchBar />
 
-                    <p className='bg-white text-black py-2 px-4 rounded-lg h-full flex items-center'>
-                        English
-                        <MdOutlineArrowDropDown size={23} />
-                    </p>
+                    <div className='flex justify-between gap-5'>
+                        <p className='bg-white text-black py-2 px-4 rounded-lg h-full flex items-center'>
+                            English
+                            <MdOutlineArrowDropDown size={23} />
+                        </p>
 
-                    <div className="flex items-center gap-2">
-                        <IoIosCart size={25} />
-                        Cart
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <MdAccountCircle size={25} />
-                        Profile
+                        <div className="flex items-center gap-2 cursor-pointer">
+                            <IoIosCart size={25} />
+                            Cart
+                        </div>
+                        <div className="flex items-center gap-2 cursor-pointer">
+                            <MdAccountCircle size={25} />
+                            Profile
+                        </div>
                     </div>
                 </div>
 
                 <div className='flex items-center justify-between w-full'>
-                    <div className='flex items-center justify-center rounded-full bg-[#FEFEFE] bg-opacity-60 w-10 h-10 text-black'>
+                    <div className='flex items-center justify-center rounded-full bg-[#FEFEFE] bg-opacity-60 w-10 h-10 text-black cursor-pointer'>
                         <MdKeyboardArrowLeft size={23} />
                     </div>
 
-                    <h1 className='text-6xl text-center font-bold text-white uppercase leading-[90px]'>
+                    <h1 className='text-3xl sm:text-6xl leading-[40px] sm:leading-[90px] text-center font-bold text-white uppercase '>
                         Get start <br />
                         your favourite shopping
                     </h1>
 
-                    <div className='flex items-center justify-center rounded-full bg-[#FEFEFE] bg-opacity-60 w-10 h-10 text-black'>
+                    <div className='flex items-center justify-center rounded-full bg-[#FEFEFE] bg-opacity-60 w-10 h-10 text-black cursor-pointer'>
                         <MdKeyboardArrowRight size={23} />
                     </div>
                 </div>

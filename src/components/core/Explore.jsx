@@ -34,14 +34,14 @@ const Explore = () => {
     // console.log("data ==== ", data)
 
     return (
-        <div className='mt-[300px bg-white w-full h-full py-5 px-24 relative'>
+        <div className='bg-white w-full h-full py-5 px-24 relative'>
             <h3 className='text-3xl font-bold text-center'>
                 Man & Woman Fashion
             </h3>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 place-items-center gap-8">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-items-center gap-8">
                 {!loading ? (
-                    data?.map((item) => (
+                    data && data?.map((item) => (
                         <ProductCard
                             key={item.id}
                             item={item}

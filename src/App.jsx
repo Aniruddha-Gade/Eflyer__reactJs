@@ -1,9 +1,8 @@
-import { useState } from "react";
 import Navbar from "./components/shared/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AllProduct from "./pages/AllProduct";
-// import Home from "./pages/home";
+import Footer from "./components/shared/Footer";
 
 
 function App() {
@@ -18,6 +17,7 @@ function App() {
 
       </Routes>
 
+      <Footer />
     </div>
   );
 }
