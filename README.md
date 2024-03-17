@@ -31,6 +31,14 @@ The project leverages the Fake Store API to fetch product data dynamically.
 - **State Management with Redux Toolkit 🔄 : Redux Toolkit is employed for efficient state management, ensuring seamless data handling and updates throughout the application.
 - **Tailwind CSS Styling 🎨 :** The project utilizes Tailwind CSS for styling, allowing for quick and responsive design implementation across various devices and screen sizes.
 - **Custom Loading Skeleton 💀 :** A custom loading skeleton is implemented to provide visual feedback to users while product data is being fetched, enhancing perceived performance.
+- **Dynamic Navbar 📜 :** Enhance user experience with a dynamic navbar that intelligently adjusts its visibility as users scroll through the page. When scrolling down, the navbar gracefully hides to provide a distraction-free view of the content. Upon slight upward scrolling, the navbar smoothly reappears, ensuring easy access to navigation options without obstructing the user's browsing experience.
+
+
+
+
+
+
+
 
 
 ## React Hooks 🎣
