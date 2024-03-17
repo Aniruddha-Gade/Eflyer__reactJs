@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Button from './Button'
-
+import Img from '../shared/Img'
 
 const ProductCard = ({ item }) => {
 
@@ -21,7 +21,7 @@ const ProductCard = ({ item }) => {
           {item?.price}
         </p>
 
-        <img
+        <Img
           src={item?.image}
           className="object-contain w-[300px] h-[300px] my-10 group-hover:scale-105 duration-300"
         />
