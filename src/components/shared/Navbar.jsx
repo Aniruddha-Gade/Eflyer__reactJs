@@ -1,9 +1,44 @@
+import { useEffect, useState } from "react";
 import { headerLinks } from "../../constants";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+    const [lastScollY, setLastScrollY] = useState(0);
+    const [showNavBar, setShowNavBar] = useState('top');
+
+
+    // control Navbar - show / hide   
+    const controlNavbar = () => {
+
+        if (window.scrollY > 200) {
+            if (window.scrollY > lastScollY) {
+                setShowNavBar('hide')
+            }
+            else {
+                setShowNavBar('show')
+            }
+        }
+
+        else {
+            setShowNavBar('top')
+        }
+
+        setLastScrollY(window.scrollY);
+    }
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar);
+
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        }
+    })
+
+
     return (
-        <nav className="flex justify-between items-center py-2 bg-zinc-800 text-white">
+        <nav className={`${showNavBar} w-full h-14 fixed flex justify-between items-center py-2 bg-zinc-800 text-white z-[10] translate-y-0 transition-all`}>
 
             {/* company logo */}
             <Link
