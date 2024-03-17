@@ -58,10 +58,13 @@ const Navbar = () => {
             <div className="w-full flex justify-center items-center ">
                 <ul className="flex gap-6 ">
                     {headerLinks.map((link) => (
-                        <li key={link.id} className="capitalize">
-                            <Link to={link.route}>
+                        <li key={link.id} className="py-4 capitalize relative hover:text-orange-500 transition-all duration-200 group cursor-pointer">
+                            <Link to={link.route}
+                                className=""
+                            >
                                 {link.label}
                             </Link>
+                            <div className='hidden group-hover:block absolute h-1 w-full bg-orange-500 bottom-0'></div>
                         </li>
                     ))}
                 </ul>
