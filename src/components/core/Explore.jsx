@@ -1,5 +1,7 @@
 import useFetch from "../../hooks/useFetch";
-import Product from '../shared/Product'
+import { useSelector } from "react-redux";
+
+import ProductCard from '../shared/ProductCard'
 
 
 // Loading Skeleton
@@ -9,7 +11,7 @@ const SklItem = () => {
             <div className="skeleton rounded-xl w-20 h-5"></div>
             <div className="skeleton rounded-xl w-48 h-5"></div>
 
-            <div className="skeleton w-full rounded-xl aspect-[1/1.5] "></div>
+            <div className="skeleton w-full rounded-xl aspect-square "></div>
 
             <div className="skeleton rounded-xl w-24 h-5"></div>
         </div>
@@ -20,7 +22,15 @@ const SklItem = () => {
 
 const Explore = () => {
 
-    const { data, loading } = useFetch('/products');
+    const { categoryName, searchQuery } = useSelector(state => state.searchSlice);
+    // console.log(`Values from store are , categoryName = ${categoryName} , searchQuery = ${searchQuery} `)
+
+    // if category available then fetch data byu category 
+    // similar for search query
+    const URL = `/products${categoryName ? `/category/${categoryName}` : searchQuery ? `?q=${searchQuery}` : ''}`;
+
+
+    const { data, loading } = useFetch(URL);
     // console.log("data ==== ", data)
 
     return (
@@ -32,24 +42,25 @@ const Explore = () => {
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 place-items-center gap-8">
                 {!loading ? (
                     data?.map((item) => (
-                        <Product
+                        <ProductCard
                             key={item.id}
                             item={item}
                         />
                     ))
                 ) : (
                     // show loading skeleton if data not loaded
-                    <>
-                        <SklItem />
-                        <SklItem />
-                        <SklItem />
-                        <SklItem />
-                        <SklItem />
-                        <SklItem />
-                    </>
+
+                    // <>
+                    //     <SklItem />
+                    //     <SklItem />
+                    //     <SklItem />
+                    //     <SklItem />
+                    //     <SklItem />
+                    //     <SklItem />
+                    // </>
+                    Array.from({ length: 6 }, (_, index) => <SklItem key={index} />)
                 )}
             </div>
-
         </div>
     )
 }

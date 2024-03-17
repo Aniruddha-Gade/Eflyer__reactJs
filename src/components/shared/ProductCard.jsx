@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom'
-import Button from '../shared/Button'
+import Button from './Button'
 
 
-const Product = ({ item }) => {
-
+const ProductCard = ({ item }) => {
 
 
   return (
     <div className="w-[350px] rounded-lg shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] p-5 group">
-
       <Link
         to='/product/'
         className='flex flex-col items-center '
@@ -17,8 +15,6 @@ const Product = ({ item }) => {
           {item?.title.split(' ').slice(0, 3).join(' ')}
           {item?.title.split(' ').length > 3 ? ' ...' : ''}
         </p>
-
-
 
         <p>
           <span className='text-red-400 '>Price $ </span>
@@ -37,10 +33,8 @@ const Product = ({ item }) => {
 
         />
       </Link>
-
-
     </div>
   )
 }
 
-export default Product
+export default ProductCard

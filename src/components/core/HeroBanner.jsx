@@ -1,4 +1,3 @@
-import Img from '../shared/Img'
 import SearchBar from '../shared/SearchBar'
 import Button from '../shared/Button';
 
@@ -10,9 +9,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCart } from "react-icons/io";
 import { MdAccountCircle } from "react-icons/md";
 import { MdOutlineArrowDropDown, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import CategoryList from '../shared/CategoryList';
 
 
 const HeroBanner = () => {
+
+
+
     return (
         <div className="w-full h-[450px] md:h-[500px] flex justify-center items-center relative text-white">
 
@@ -39,10 +42,10 @@ const HeroBanner = () => {
                     <div className="">
                         <GiHamburgerMenu size={50} />
                     </div>
-                    <p className='bg-zinc-800 py-2 px-4 rounded-lg h-full flex gap-1 items-center '>
-                        All category
-                        <MdOutlineArrowDropDown size={23} />
-                    </p>
+
+                    {/* category list */}
+                    <CategoryList />
+
 
                     {/* searh input */}
                     <SearchBar />
@@ -60,7 +63,6 @@ const HeroBanner = () => {
                         <MdAccountCircle size={25} />
                         Profile
                     </div>
-
                 </div>
 
                 <div className='flex items-center justify-between w-full'>

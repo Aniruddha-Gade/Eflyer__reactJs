@@ -1,22 +1,24 @@
-import { useRef, useState } from 'react'
+import { useRef,  } from 'react'
+import { useDispatch } from 'react-redux';
+import {setSearchQuery} from '../../slices/searchSlice'
 
 // react icons
 import { IoSearch } from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
+
 
 
 const SearchBar = () => {
 
-  const [searchQuery, setSearchQuery] = useState('');
+  const dispatch = useDispatch();
   const searchRef = useRef(null);
-  const navigate = useNavigate();
 
 
   // handle search
-  const searchQueryHandler = (event) => {
-    if ((event?.key === 'Enter' || event === 'searchButton') && searchQuery?.length > 0) {
-      console.log("Search query = ", searchQuery)
-      navigate(`/search/${searchQuery}`);
+  const handleSearch = (event) => {
+    if ((event?.key === 'Enter' || event === 'searchButton') && event.target.value?.length > 0) {
+      // console.log("Search query = ", event.target.value)
+     
+      dispatch(setSearchQuery(event.target.value))
     }
   }
 
@@ -28,14 +30,14 @@ const SearchBar = () => {
         className='w-[500px] md:w-[calc(100%-150px) h-full
                  text-black bg-white px-[15px] md:px-[30px] 
                  text-[14px] md:text-[18px] outline-none border-none font-medium rounded-l-lg'
-        onChange={(e) => setSearchQuery(e.target.value)}
-        onKeyUp={searchQueryHandler}
+        onChange={(e) => handleSearch(e)}
+        onKeyUp={handleSearch}
         ref={searchRef}
       />
 
       <button
         onClick={() => {
-          searchQueryHandler('searchButton');
+          handleSearch('searchButton');
           searchRef.current?.focus();
         }}
         className="flex items-center justify-center bg-orange-500 md:w-[50px] h-full text-white 
