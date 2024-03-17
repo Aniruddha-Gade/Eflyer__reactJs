@@ -17,10 +17,10 @@ const HeroBanner = () => {
         <div className="w-full h-[450px] md:h-[500px] flex justify-center items-center relative text-white">
 
             {/* background image */}
-            <div className='w-screen h-screen absolute top-0 left-0 opacity-[0.5 overflow-hidden object-cover'>
+            <div className='w-screen h-screen absolute top-0 left-0 bottom-0 opacity-[0.5 overflow-y-hidden object-cover'>
                 <img
                     src={background}
-                    className='w-full h-full object-cover'
+                    className='w-full h-full overflow-hidden object-cover'
                     alt="background"
                 />
                 {/* <Img src={background} alt="background" className='w-screen h-screen overflow-hidden object-cover' /> */}

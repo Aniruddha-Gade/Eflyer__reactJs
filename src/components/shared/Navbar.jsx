@@ -8,7 +8,8 @@ const Navbar = () => {
             {/* company logo */}
             <Link
                 to="/"
-                className="flex items-center gap-2 px-5">
+                className="flex items-center gap-2 px-5"
+            >
                 <img
                     src="../../../public/eflyer-icon.png"
                     width={40}

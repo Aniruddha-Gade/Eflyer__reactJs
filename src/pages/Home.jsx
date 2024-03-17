@@ -1,3 +1,4 @@
+import Explore from '../components/core/Explore'
 import HeroBanner from '../components/core/HeroBanner'
 
 const Home = () => {
@@ -5,7 +6,7 @@ const Home = () => {
         <div>
             <HeroBanner />
 
-
+            <Explore />
         </div>
     )
 }
