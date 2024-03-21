@@ -3,7 +3,7 @@ import HeroBanner from '../components/core/HeroBanner'
 
 const Home = () => {
     return (
-        <div className='mt-12'>
+        <div className='mt12'>
             <HeroBanner />
 
             <Explore />

@@ -93,6 +93,11 @@
   background-color: #020c1b9e;
 }
 
+.show .header_section_top{
+  /* backdrop-filter: blur(3.5px); */
+  background-color: transparent;
+}
+
 .hide {
   transform: translateY(-60px);
 }
@@ -101,4 +106,19 @@
 .shadow-on-hoverIcon:hover {
   box-shadow: 0 0 0.625em #da2f68;
 
+}
+
+.header_section_top {
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+}
+
+
+
+.banner_bg_main {
+  width: 100%;
+  float: left;
+  background-image: url(../public/assets/banner-bg.png);
+  height: auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }

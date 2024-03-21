@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`${showNavBar} w-full h-14 fixed flex justify-between items-center p-2 px-5 bg-zinc-800 text-white z-[10] translate-y-0 transition-all`}>
+        <nav className={`${showNavBar} w-full h-14 fixed flex justify-between items-center p-2 px-4 gap-4 text-white z-[10] translate-y-0 transition-all`}>
 
             {/* company logo */}
             <Link
@@ -55,7 +55,7 @@ const Navbar = () => {
             </Link>
 
 
-            <div className="w-full flex justify-end md:justify-center items-center">
+           <div className="w-full flex justify-end md:justify-center items-center header_section_top bg-[#2b2a29]">
                 <ul className="hidden sm:flex gap-6 ">
                     {headerLinks.map((link) => (
                         <li key={link.id} className="py-4 capitalize relative hover:text-orange-500 transition-all duration-200 group cursor-pointer">
@@ -74,6 +74,24 @@ const Navbar = () => {
                 </div>
 
             </div>
+
+            {/* <div className="container">
+                <div className="header_section_top">
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <div className="custom_menu">
+                                <ul>
+                                    <li><a href="#">Best Sellers</a></li>
+                                    <li><a href="#">Gift Ideas</a></li>
+                                    <li><a href="#">New Releases</a></li>
+                                    <li><a href="#">Today's Deals</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
 
         </nav>
     );
