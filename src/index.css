@@ -120,7 +120,10 @@
   height: auto;
   background-size: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 .shadow-box{
   box-shadow: 0px 0 30px 10px #f0f0f0;

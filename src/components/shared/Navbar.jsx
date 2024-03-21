@@ -55,8 +55,8 @@ const Navbar = () => {
             </Link>
 
 
-           <div className="w-full flex justify-end md:justify-center items-center header_section_top bg-[#2b2a29]">
-                <ul className="hidden sm:flex gap-6 ">
+            <div className="w-full sm:flex justify-end md:justify-center items-center header_section_top hidden bg-[#2b2a29]">
+                <ul className="flex gap-6 ">
                     {headerLinks.map((link) => (
                         <li key={link.id} className="py-4 capitalize relative hover:text-orange-500 transition-all duration-200 group cursor-pointer">
                             <Link to={link.route}
@@ -68,11 +68,11 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+            </div>
 
-                <div className="sm:hidden cursor-pointer">
-                    <GiHamburgerMenu size={30} />
-                </div>
-
+            {/* for mobile */}
+            <div className="sm:hidden cursor-pointer">
+                <GiHamburgerMenu size={30} />
             </div>
 
             {/* <div className="container">
