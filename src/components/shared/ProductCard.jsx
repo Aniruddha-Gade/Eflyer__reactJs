@@ -23,7 +23,7 @@ const ProductCard = ({ item }) => {
 
         <Img
           src={item?.image}
-          className="object-contain w-[300px] h-[300px] my-10 group-hover:scale-105 duration-300"
+          className="object-contain w-[300px] h-[300px] my-10 group-hover:scale-105 duration-300 transition-all"
         />
 
         <Button
