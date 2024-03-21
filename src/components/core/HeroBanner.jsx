@@ -1,8 +1,6 @@
 import SearchBar from '../shared/SearchBar'
 import Button from '../shared/Button';
 
-import background from '../../../public/assets/background2.png'
-
 
 // react icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -17,16 +15,13 @@ const HeroBanner = () => {
 
 
     return (
-        <div className="w-full h-[650px] md:h-[550px] flex justify-center items-center relative text-white">
+        <div className="w-full h-[650px] md:h-[600px] flex justify-center items-center relative text-white ">
 
             {/* background image */}
-            <div className='w-screen h-screen absolute top-0 left-0 bottom-0 opacity-[0.5 overflow-y-hidden object-cover banner_bg_main'>
+            <div className='w-full h-full absolute top-0 left-0 bottom-0 overflow-y-hidden object-cover banner_bg_main'>
             </div>
 
-            {/* background layer */}
-            <div className='absolute left-0 bottom-0 w-full h-[100px] opacity_layer_bg '></div>
-
-            <div className='w-full px-24 py-10 flex flex-col justify-around md:justify-center h-full items-center gap-5 md:gap-11 relative '>
+            <div className='w-full px-24 py-1 flex flex-col justify-around md:justify-center h-full items-center gap-5 md:gap-11 relative '>
                 <h2 className='text-[30px] md:text-[40px] font-bold font-rubik '>
                     Eflyer
                 </h2>
