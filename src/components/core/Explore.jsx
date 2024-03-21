@@ -35,7 +35,7 @@ const Explore = () => {
 
     return (
         <div className='bg-white w-full h-full py-5 px-24 relative'>
-            <h3 className='text-3xl font-bold text-center'>
+            <h3 className='text-4xl font-bold text-center'>
                 Man & Woman Fashion
             </h3>
 
