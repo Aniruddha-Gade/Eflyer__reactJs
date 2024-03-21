@@ -1,6 +1,7 @@
 import SearchBar from '../shared/SearchBar'
 import Button from '../shared/Button';
 
+import indiaFlag from '../../../public/assets/india-flag.png'
 
 // react icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -44,7 +45,7 @@ const HeroBanner = () => {
                     <div className='flex justify-between gap-5'>
                         {/* language select */}
                         <div className='bg-white w-full text-black py-2 px-5 rounded-lg h-full flex justify-between gap-2 items-center cursor-pointer'>
-                            <img src="../../../public/assets/india-flag.png" alt="" className='w-6 h-5 object-contain' />
+                            <img src={indiaFlag} alt="india flag" className='w-6 h-5 object-contain' />
                             <p>English</p>
                             <MdOutlineArrowDropDown size={35} />
                         </div>
