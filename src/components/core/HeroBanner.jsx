@@ -42,10 +42,12 @@ const HeroBanner = () => {
                     <SearchBar />
 
                     <div className='flex justify-between gap-5'>
-                        <p className='bg-white text-black py-2 px-4 rounded-lg h-full flex items-center'>
-                            English
-                            <MdOutlineArrowDropDown size={23} />
-                        </p>
+                        {/* language select */}
+                        <div className='bg-white w-full text-black py-2 px-5 rounded-lg h-full flex justify-between gap-2 items-center cursor-pointer'>
+                            <img src="../../../public/assets/india-flag.png" alt="" className='w-6 h-5 object-contain' />
+                            <p>English</p>
+                            <MdOutlineArrowDropDown size={35} />
+                        </div>
 
                         <div className="flex items-center gap-2 cursor-pointer">
                             <IoIosCart size={25} />
