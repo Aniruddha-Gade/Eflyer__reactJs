@@ -6,7 +6,7 @@ const ProductCard = ({ item }) => {
 
 
   return (
-    <div className="w-[350px] rounded-lg shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] p-5 group">
+    <div className="w-[350px] rounded-lg shadow-box p-5 group">
       <Link
         to='/product/'
         className='flex flex-col items-center '
